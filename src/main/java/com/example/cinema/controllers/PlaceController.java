@@ -3,9 +3,7 @@ package com.example.cinema.controllers;
 import com.example.cinema.models.Place;
 import com.example.cinema.services.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +23,23 @@ public class PlaceController {
         return placeService.findAll();
     }
 
+    @GetMapping("/find/{id}")
+    public Place findById(@PathVariable("id") Long id){
+        return placeService.findById(id);
+    }
 
+    @PostMapping("/add")
+    public Place save(Place place){
+        return placeService.savePlace(place);
+    }
+
+    @PostMapping ("/update")
+    public Place update(Place place){
+        return placeService.savePlace(place);
+    }
+
+    @PostMapping("/delete/{id}")
+    public void deleteById(@PathVariable("id") Long id){
+        placeService.deleteById(id);
+    }
 }
