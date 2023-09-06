@@ -20,6 +20,5 @@ public class Place {
     private long id;
 
     private int number;
-
     private int price;
 }

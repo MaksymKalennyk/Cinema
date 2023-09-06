@@ -1,6 +1,5 @@
 package com.example.cinema.services;
 
-import com.example.cinema.models.Place;
 import com.example.cinema.models.Session;
 import com.example.cinema.repo.SessionRepository;
 import jakarta.persistence.EntityNotFoundException;
