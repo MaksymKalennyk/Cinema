@@ -23,7 +23,7 @@ public class SessionController {
         return sessionService.findAll();
     }
 
-    @PostMapping("/find/{id}")
+    @GetMapping("/find/{id}")
     public Session findById(@PathVariable("id") Long id){
         return sessionService.findById(id);
     }
