@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/session")
+@CrossOrigin
 public class SessionController {
 
     private final SessionService sessionService;
