@@ -19,5 +19,6 @@ public class Session {
     private String name;
     private String time;
     private long rate;
+    private String photo;
 
 }
