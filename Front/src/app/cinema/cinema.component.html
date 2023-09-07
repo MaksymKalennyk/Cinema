@@ -17,6 +17,15 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
+
+<div *ngFor="let session of sessions">
+  <h2>{{ session.name }}</h2>
+  <p>{{ session.time }}</p>
+  <p>{{ session.rate }}</p>
+  <img [src]="session.photo" alt="Session Image">
+</div>
+
+
+

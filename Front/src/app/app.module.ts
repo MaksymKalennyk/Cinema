@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { CinemaComponent } from './cinema/cinema.component';
 import {RouterModule, Routes} from "@angular/router";
 import { SessionComponent } from './cinema/session/session.component';
+import {HttpService} from "./cinema/HttpService";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [
   {
@@ -27,9 +29,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
