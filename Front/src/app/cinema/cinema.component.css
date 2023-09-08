@@ -1,0 +1,21 @@
+.star {
+  color: orange;
+  font-size: 20px;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+}
+
+.card-rating .star::before {
+  content: "\2605";
+  margin-right: 5px;
+}
+
+.session-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+

@@ -2,18 +2,22 @@
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col" *ngFor="let session of sessions">
-        <div class="card shadow-sm">
-          <img [src]="session.photo" alt="Session Image" class="card-img-top">
-          <div class="card-body">
+        <div class="card shadow-sm d-flex h-100">
+          <img [src]="session.photo" alt="Session Image" class="card-img-top session-image">
+          <div class="card-body d-flex flex-column">
             <h2 class="card-title">{{ session.name }}</h2>
-            <p class="card-text">{{ session.time }}</p>
-            <p class="card-text">{{ session.rate }}</p>
+            <div class="mt-auto">
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="card-text">{{ session.time }}</p>
+                <div class="card-rating">
+                  <span class="star"></span>
+                  {{ session.rate }}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
