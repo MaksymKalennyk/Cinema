@@ -3,6 +3,7 @@ package com.example.cinema.models;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,4 +22,6 @@ public class Session {
     private long rate;
     private String photo;
 
+    @Transient
+    private List<SessionPlace> sessionPlaces;
 }

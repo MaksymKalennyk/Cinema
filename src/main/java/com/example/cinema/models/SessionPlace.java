@@ -6,23 +6,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "places")
-public class Place {
+@Table(name = "session_places")
+public class SessionPlace {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private int number;
-    private int price;
+    @ManyToOne
+    @JoinColumn(name = "session_id")
+    private Session session;
 
-    @Transient
-    private List<SessionPlace> sessionPlaces;
+    @ManyToOne
+    @JoinColumn(name = "place_id")
+    private Place place;
+
+    private boolean isAvailable;
 }
